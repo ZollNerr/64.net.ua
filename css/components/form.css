@@ -1,0 +1,12 @@
+.order-section {
+  background: url("/img/decor/pattern.png");
+  height: 100vh;
+}
+
+.form {
+  display: flex;
+}
+
+.form__col {
+  flex: 1;
+}
