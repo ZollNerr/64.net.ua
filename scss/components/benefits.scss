@@ -4,7 +4,7 @@
 
 .benefits__item {
     flex: 1;
-    padding: 0 3%;
+    margin: 0 3%;
     position: relative;
 
     &:before {
@@ -72,5 +72,5 @@
 }
 
 .benefit__desc {
-    padding: 0 6%;
+    // padding: 0 6%;
 }

@@ -110,6 +110,7 @@ img {
 
 .logo {
   width: 50px;
+  height: 40px;
 }
 
 .hero__main-title {
@@ -264,7 +265,7 @@ img {
 
 .benefits__item {
   flex: 1;
-  padding: 0 3%;
+  margin: 0 3%;
   position: relative;
 }
 .benefits__item:before {
@@ -324,10 +325,6 @@ img {
   color: #000;
 }
 
-.benefit__desc {
-  padding: 0 6%;
-}
-
 .reviews__display {
   background: #f8faf9;
   padding: 50px 45px 34px;
@@ -349,7 +346,7 @@ img {
   top: -65px;
 }
 .reviews__display:after {
-  content: url("/img/decor/grey_plant.png");
+  content: url("../img/decor/grey_plant.png");
   position: absolute;
   width: 127px;
   height: 167px;
@@ -431,7 +428,7 @@ img {
 }
 
 .order-section {
-  background: url("../img/decor/pattern.png") center center no-repeat;
+  background: url("../img/decor/pattern.png") center center;
   object-fit: cover;
   height: 100vh;
   min-height: 650px;
