@@ -1,0 +1,9 @@
+.contacts {
+  font-style: normal;
+  font-size: rem(20px);
+  color: #010101;
+}
+
+.contacts__phone {
+  color: red;
+}

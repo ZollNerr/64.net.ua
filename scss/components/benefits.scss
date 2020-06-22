@@ -1,5 +1,9 @@
 .benefits {
     display: flex;
+
+    @include phones {
+        flex-direction: column;
+    }
 }
 
 .benefits__item {
@@ -7,12 +11,22 @@
     margin: 0 3%;
     position: relative;
 
+    @include phones {
+        padding: 0;
+        margin: 0;
+        margin-bottom: rem(19px);
+    }
+
     &:before {
         content: url("../img/decor/separator.png");
         position: absolute;
-        top: 50px;
+        top: rem(50px);
         right: 0;
         transform: translateX(50%);
+
+        @include phones {
+            display: none;
+        }
     }
 
     &:first-child {
@@ -32,11 +46,24 @@
     position: relative;
     background: url("../img/decor/grey-leaf.png") left top 57% no-repeat;
 
+    @include tablets {
+        background-position: left top 25%;
+    }
+
+    @include phones {
+        background: none;
+    }
+
     &:before {
         content: url("../img/decor/malina.png");
         position: absolute;
-        bottom: -180px;
+        bottom: rem(-180px);
         left: 0;
+
+        @include phones {
+            display: none;
+        }
+
     }
 }
 
@@ -44,12 +71,17 @@
 
 .benefit {
     text-align: center;
+
+    @include phones {
+        display: flex;
+        text-align: left;
+    }
 }
 
 .benefit__image-wrapper {
     display: inline-flex;
-    width: 126px;
-    height: 126px;
+    width: rem(126px);
+    height: rem(126px);
     position: relative;
     background: #f2f5f4;
     border-radius: 50%;
@@ -57,8 +89,8 @@
 }
 
 .benefit__icon {
-    width: 75px;
-    height: 69px;
+    width: rem(75px);
+    height: rem(69px);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -66,9 +98,20 @@
 }
 
 .benefit__title {
-    font-size: 27px;
+    font-size: rem(27px);
+    margin-bottom: rem(10px);
     font-weight: bold;
     color: #000;
+}
+
+
+.benefit__image {
+    margin-bottom: rem(19px);
+
+    @include phones {
+        margin-bottom: 0;
+        margin-right: rem(10px);
+    }
 }
 
 .benefit__desc {

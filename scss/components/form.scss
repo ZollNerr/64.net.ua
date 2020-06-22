@@ -3,32 +3,46 @@
     background: url("../img/decor/pattern.png") center center;
     object-fit: cover;
     height: 100vh;
-    min-height: 650px;
+    min-height: rem(650px);
     position: relative;
 }
 
 
 .form {
     display: flex;
+
+    @include tablets {
+        flex-direction: column;
+        padding: 0 19%;
+    }
+
+    @include phones {
+        padding: 0;
+    }
+
 }
 
 .form__col {
     flex: 1;
-    margin-right: 20px;
+    margin-right: rem(20px);
 
     &:last-child {
+        margin-right: 0;
+    }
+
+    @include tablets {
         margin-right: 0;
     }
 }
 
 .form__row {
     display: flex;
-    margin-bottom: 18px;
+    margin-bottom: rem(18px);
 }
 
 .form__block {
     flex: 1;
-    margin-right: 20px;
+    margin-right: rem(20px);
 
     &:last-child {
         margin-right: 0;
@@ -38,9 +52,15 @@
 .form__input {
     width: 100%;
     border: none;
-    padding: 18px 11px;
-    border: solid 3px transparent;
-    // border: solid 3px #dee2bd;
+    padding: rem(18px) rem(11px);
+    border: solid rem(3px) transparent;
+    // border: solid rem(3px) #dee2bd;
+
+    @include tablets {
+        height: rem(35px);
+        padding: rem(8px) rem(11px);
+    }
+    
 
     &:focus {
         border-color: #dee2bd;
@@ -48,20 +68,35 @@
     }
 
     &--textarea {
-        height: 180px;
+        height: rem(180px);
         resize: none;
+
+        @include tablets {
+            height: rem(80px);
+        }
     }
 }
 
 .form__controls {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 15px;
+    margin-bottom: rem(15px);
 
+    @include phones {
+        justify-content: center;
+    }
 }
 
+.form__btns {
+    display: flex;
+    justify-content: center;
+} 
+
+
+
+
 .radio__title {
-    margin-left: 10px;
+    margin-left: rem(10px);
 }
 
 
@@ -69,6 +104,15 @@
     display: flex;
     cursor: pointer;
     user-select: none;
+
+    @include phones {
+        margin-bottom: rem(10px);
+    }
+
+    &:first-child {
+        margin-right: rem(20px);
+    }
+
 
     &--checkbox {
         .radio__visible {
@@ -81,12 +125,10 @@
     }
 }
 
-.radio__elem__last {
-    margin-left: 20px;
-}
+
 
 .radio--checkbox {
-    margin-bottom: 30px;
+    margin-bottom: rem(30px);
 }
 
 
@@ -102,8 +144,8 @@
 }
 
 .radio__visible {
-    width: 26px;
-    height: 26px;
+    width: rem(26px);
+    height: rem(26px);
     position: relative;
     border-radius: 50%;
     background: #fff;
@@ -111,8 +153,8 @@
 
     &:before {
         content: "";
-        height: 14px;
-        width: 14px;
+        height: rem(14px);
+        width: rem(14px);
         background: #365a49;
         border-radius: 50%;
         position: absolute;
