@@ -21,6 +21,10 @@
     text-align: center;
     text-transform: uppercase;
     color: #000;
+
+    @include small-phones {
+        margin-bottom: rem(10px);  
+    }
 }
 
 
@@ -36,6 +40,10 @@
 
 .headline__subtitle {
     padding: 0 26%;
+
+    @include tablets {
+        padding: 0 10%;
+    }
 
     @include phones {
         padding: 0 5%;

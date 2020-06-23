@@ -8,6 +8,11 @@ html {
     @include phones  {
         font-size: $baseFontSize - 2px;
     }
+
+    @include small-phones  {
+        font-size: $baseFontSize - 4px;
+        line-height: 1;
+    }
 }
 
 
@@ -23,6 +28,10 @@ body {
     -moz-osx-font-smoothing: grayscale;
     position: relative;
     color: #666666;
+
+    @include small-phones  {
+        // line-height: 1.3;
+    }
 }
 
 .wrapper {

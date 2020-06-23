@@ -52,7 +52,6 @@
     @include tablets {
         width: rem(130px);
         height: rem(132px);
-        
     }
 }
 
@@ -65,6 +64,10 @@
 .reviews__content {
     flex: 1;
     margin-left: rem(20px);
+
+    @include phones  {
+        margin-left: 0;
+    }
 }
 
 .reviews__title {
@@ -72,11 +75,24 @@
     font-weight: bold;
     margin-bottom: rem(22px);
     color: black;
+
+    @include small-phones  {
+        margin-bottom: rem(10px);
+    }
 }
 
 .reviews__text {
     margin-bottom: rem(36px);
-    // width: 80%;
+    width: 80%;
+
+    @include tablets {
+        width: 100%;   
+    }
+
+    @include small-phones {
+        margin-bottom: rem(10px);  
+    }
+
 }
 
 .reviews__author {

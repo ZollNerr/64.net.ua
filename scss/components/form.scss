@@ -13,7 +13,10 @@
 
     @include tablets {
         flex-direction: column;
-        padding: 0 19%;
+        // padding: 0 19%;
+        padding: 0;
+        margin: 0 auto;
+        max-width: 460px;
     }
 
     @include phones {
@@ -106,7 +109,7 @@
     user-select: none;
 
     @include phones {
-        margin-bottom: rem(10px);
+        // margin-bottom: rem(10px);
     }
 
     &:first-child {

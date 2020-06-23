@@ -19,6 +19,11 @@
     }
 }
 
+
+.phone-number__icon-elem {
+    fill: #0b4d3c;
+}
+
 .socials {
     display: flex;
     justify-content: space-between;
@@ -28,6 +33,7 @@
     width: rem(20px);
     height: rem(20px);
     margin-right: rem(20px);
+    fill: #b3b3b3;
 
     &:last-child {
         margin-right: 0;

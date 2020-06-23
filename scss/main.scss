@@ -4,12 +4,16 @@ $baseFontSize: 18px;
 //breakpoints
 $tablets: 768px;
 $phones: 480px;
+$small-phones: 400px;
+
 
 
 
 //colors
 $blue: #61c4d9;
 $darkGreen: #0b4d3c;
+
+//Green color:#365a49
 
 @import "./components/media";
 

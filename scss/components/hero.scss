@@ -50,6 +50,10 @@
             width: rem(316px);
             height: rem(330px);
             margin-bottom: rem(16px);
+
+            @include small-phones  {
+                height: rem(280px);
+            }
         }
     }
 }
@@ -86,6 +90,7 @@
 .logo {
     width: 50px;
     height: 40px;
+    fill: #fff;
 }
 
 .hero__main-title {
@@ -107,6 +112,10 @@
 
     @include phones {
         padding: 0 16%;
+    }
+
+    @include small-phones  {
+        padding: 0 5%;
     }
 
 }
