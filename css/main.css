@@ -898,3 +898,62 @@ img {
 .contacts__phone {
   color: #0b4d3c;
 }
+
+.side-menu__wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  color: #fff;
+  height: 100vh;
+  width: 100%;
+  background: rgba(52, 55, 57, 0.99);
+}
+
+.side-menu__list {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 8.3333333333rem;
+}
+
+.side-menu__item {
+  font-size: 2rem;
+}
+
+.side-menu__link {
+  text-decoration: none;
+}
+
+.close-x__link {
+  position: fixed;
+  padding-left: 14px;
+  right: 1.6666666667rem;
+  top: 1.6666666667rem;
+  width: 1.6666666667rem;
+  height: 1.6666666667rem;
+}
+.close-x__link:before, .close-x__link:after {
+  position: absolute;
+  display: block;
+  content: "";
+  height: 1.6666666667rem;
+  width: 3px;
+  border-radius: 1.5px;
+  background-color: #fff;
+}
+.close-x__link:before {
+  transform: rotate(45deg);
+}
+.close-x__link:after {
+  transform: rotate(-45deg);
+}
+
+.side-menu {
+  display: none;
+  z-index: -1;
+}
+
+.side-menu--active {
+  z-index: 1000;
+  display: block;
+}
