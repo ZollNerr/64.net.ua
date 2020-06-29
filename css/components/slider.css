@@ -1,0 +1,10 @@
+.sliders {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.arrow {
+  height: rem(28px);
+  width: rem(13px);
+}

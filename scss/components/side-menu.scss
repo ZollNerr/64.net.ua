@@ -1,10 +1,4 @@
 
-
-
-
-
-
-
 .side-menu__wrapper {
   position: fixed;
   top: 0;
@@ -31,13 +25,14 @@
   text-decoration: none;
 }
 
-.close-x__link {
+.close-cross {
   position: fixed;
-  padding-left: 14px;    /// не понимаю почему зона клика у меня смещена на 14 px ?????
+//   padding-left: 14px;    /// не понимаю почему зона клика у меня смещена на 14 px ?????
   right: rem(30px);
   top: rem(30px);
   width: rem(30px);
   height: rem(30px);
+  cursor: pointer;
 
 
     &:before, &:after {
@@ -61,6 +56,13 @@
 
 }
 
+
+.side-menu--active {
+  z-index: 1000;
+  display: block;
+}
+
+
 .side-menu {
     display: none;
     z-index: -1;
@@ -68,7 +70,3 @@
 
 
 
-.side-menu--active {
-    z-index: 1000;
-    display: block;
-}
