@@ -949,14 +949,14 @@ img {
   transform: rotate(-45deg);
 }
 
-.side-menu--active {
-  z-index: 1000;
-  display: block;
-}
-
 .side-menu {
   display: none;
   z-index: -1;
+}
+
+.side-menu--active {
+  z-index: 1000;
+  display: block;
 }
 
 .sliders {
@@ -1050,10 +1050,14 @@ img {
 
 .slider-section__left-arrow {
   position: relative;
+  height: 3.1111111111rem;
+  width: 1.4444444444rem;
 }
 
 .left-arrow__link {
   position: absolute;
+  max-width: 100%;
+  left: 0;
 }
 
 .arrow {

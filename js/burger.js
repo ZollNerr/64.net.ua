@@ -1,5 +1,5 @@
 const burger = document.querySelector(".hamburger");
-const menu = document.querySelector(".side-menu__list");
+const menu = document.querySelector(".side-menu");
 const close = document.querySelector(".close-cross");
 
 burger.addEventListener('click', function () {

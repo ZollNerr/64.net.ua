@@ -98,21 +98,23 @@
 
 .slider-section__left-arrow {
     position: relative;
+    height: rem(56px);
+    width: rem(26px);
 }
 
 
 .left-arrow__link {
     position: absolute;
+    max-width: 100%;
+    left: 0;
 }
 
 .arrow {
-    
     height: rem(56px);
     width: rem(26px);
 }
 
 .left-arrow__img {
-    
     transform: rotate(180deg);
     left: 0;
 }
