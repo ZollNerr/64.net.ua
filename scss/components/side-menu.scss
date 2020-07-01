@@ -1,0 +1,74 @@
+
+.side-menu__wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  color: #fff;
+  height: 100vh;
+  width: 100%;
+  background: rgba($color: #343739, $alpha: 0.99);
+  // display: none;
+}
+
+.side-menu__list {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: rem(150px);
+}
+
+.side-menu__item {
+  font-size: rem(36px);
+}
+
+.side-menu__link {
+  text-decoration: none;
+}
+
+.close-cross {
+  position: fixed;
+//   padding-left: 14px;    /// не понимаю почему зона клика у меня смещена на 14 px ?????
+  right: rem(30px);
+  top: rem(30px);
+  width: rem(30px);
+  height: rem(30px);
+  cursor: pointer;
+
+
+    &:before, &:after {
+        position: absolute;
+        display: block;
+        content: "";
+        height: rem(30px);
+        width: 3px;
+        border-radius: 1.5px;
+        background-color: #fff;
+
+    }
+
+    &:before {
+        transform: rotate(45deg); 
+    }
+
+    &:after {
+        transform: rotate(-45deg); 
+    }
+
+}
+
+
+.side-menu {
+  display: none;
+  z-index: -1;
+}
+
+.side-menu--active {
+  z-index: 1000;
+  display: block;
+}
+
+
+
+
+
+

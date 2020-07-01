@@ -1,0 +1,120 @@
+.benefits {
+    display: flex;
+
+    @include phones {
+        flex-direction: column;
+    }
+}
+
+.benefits__item {
+    flex: 1;
+    padding: 0 3%;
+    position: relative;
+
+    @include phones {
+        padding: 0;
+        margin: 0;
+        margin-bottom: rem(19px);
+    }
+
+    &:before {
+        content: url("../img/decor/separator.png");
+        position: absolute;
+        top: rem(50px);
+        right: 0;
+        transform: translateX(50%);
+
+        @include phones {
+            display: none;
+        }
+    }
+
+    &:first-child {
+        padding-left: 0;
+    }
+
+    &:last-child {
+        padding-right: 0;
+
+        &:before {
+            display: none;
+        }
+    }
+}
+
+.benefits-section {
+    position: relative;
+    background: url("../img/decor/grey-leaf.png") left top 57% no-repeat;
+
+    @include tablets {
+        background-position: left top 25%;
+    }
+
+    @include phones {
+        background: none;
+    }
+
+    &:before {
+        content: url("../img/decor/malina.png");
+        position: absolute;
+        bottom: rem(-180px);
+        left: 0;
+        z-index: 100;
+
+        @include phones {
+            display: none;
+        }
+
+    }
+}
+
+
+
+.benefit {
+    text-align: center;
+
+    @include phones {
+        display: flex;
+        text-align: left;
+    }
+}
+
+.benefit__image-wrapper {
+    display: inline-flex;
+    width: rem(126px);
+    height: rem(126px);
+    position: relative;
+    background: #f2f5f4;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.benefit__icon {
+    width: rem(75px);
+    height: rem(69px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+}
+
+.benefit__title {
+    font-size: rem(27px);
+    margin-bottom: rem(10px);
+    font-weight: bold;
+    color: #000;
+}
+
+
+.benefit__image {
+    margin-bottom: rem(19px);
+
+    @include phones {
+        margin-bottom: 0;
+        margin-right: rem(10px);
+    }
+}
+
+.benefit__desc {
+    // padding: 0 6%;
+}

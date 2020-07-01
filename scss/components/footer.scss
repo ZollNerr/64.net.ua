@@ -1,0 +1,42 @@
+
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: rem(23px) 0;
+    background: #fff;
+}
+
+.footer__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include phones {
+        flex-direction: column;
+    }
+}
+
+
+.phone-number__footer {
+    fill: #0b4d3c;
+}
+
+.socials {
+    display: flex;
+    justify-content: space-between;
+}
+
+.social__item {
+    width: rem(20px);
+    height: rem(20px);
+    margin-right: rem(20px);
+    fill: #b3b3b3;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
