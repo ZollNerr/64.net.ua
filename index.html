@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 
@@ -48,6 +49,26 @@
                                 <span class="hamburger__plank"></span>
                                 <span class="hamburger__plank"></span>
                             </a>
+                            <nav class="side-menu">
+                                <div class="side-menu__wrapper">
+                                    <ul class="side-menu__list">
+                                        <li class="side-menu__item"><a href="#" class="side-menu__link">О нас</a></li>
+                                        <li class="side-menu__item"><a href="#" class="side-menu__link">Батончики</a>
+                                        </li>
+                                        <li class="side-menu__item"><a href="#" class="side-menu__link">Команда</a></li>
+                                        <li class="side-menu__item"><a href="#" class="side-menu__link">Меню</a></li>
+                                        <li class="side-menu__item"><a href="#" class="side-menu__link">Отзывы</a></li>
+                                        <li class="side-menu__item"><a href="#" class="side-menu__link">Как мы
+                                                работаем</a></li>
+                                        <li class="side-menu__item"><a href="#" class="side-menu__link">Контакты</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="close-cross">
+                                    <!-- <a href="#" class="close-x__link"></a> -->
+
+                                </div>
+                            </nav>
                         </header>
                         <div class="hero__title-section">
                             <h1 class="hero__main-title">Натуральные шоколадные батончики</h1>
@@ -156,6 +177,55 @@
                         </li>
                     </ul>
                 </div>
+            </section>
+            <section class="section slider-section">
+                <div class="container">
+                    <div class="sliders">
+                        
+                        <div class="slider-section__left-arrow">
+                            <a href="#" class="left-arrow__link"><img src="./img/icons/arrow.svg" class="arrow left-arrow__img" alt="left arrow"></a>
+                        </div>
+                        <div class="slider-section slider-section__maincontent">
+                            <div class="slider__image-wrapper">
+                                <img src="./img/decor/slider-bars1-w-leafs.png" class="slider__image" alt="Батончик морские водоросли">
+                            </div>
+                            <div class="slider__content">
+                                <div class="slider__icons">
+                                    <div class="slider__icon-container">
+                                        <svg class="slider__icon-img">
+                                            <use xlink:href="./img/sprite.svg#cholate-bar-icon"></use>
+                                        </svg>
+                                        <div class="slider__icon-descr">состав</div>
+                                    </div>
+                                    <div class="slider__dropdown-box">
+                                        <ul class="dropdown__list">
+                                            <li class="dropdown-item"><img src="./img/icons/grape.svg" class="dropdown-item-img" alt="powder"><span class="dropdown-item-text">Виноград</span><span class="dropdown-item-features">25 г</span></li>
+                                            <li class="dropdown-item"><img src="./img/icons/nut.svg" class="dropdown-item-img" alt="powder"><span class="dropdown-item-text">Грецкий орех</span><span class="dropdown-item-features">32 г</span></li>
+                                            <li class="dropdown-item"><img src="./img/icons/almond.svg" class="dropdown-item-img" alt="powder"><span class="dropdown-item-text">Кунжутное семя</span><span class="dropdown-item-features">20 г</span></li>
+                                            <li class="dropdown-item"><img src="./img/icons/powder.svg" class="dropdown-item-img" alt="powder"><span class="dropdown-item-text">Сухое молоко</span><span class="dropdown-item-features">10 г</span></li>
+                                            <li class="dropdown-item"><img src="./img/icons/apitherapy.svg" class="dropdown-item-img" alt="powder"><span class="dropdown-item-text">Зам. сахара</span><span class="dropdown-item-features">4 г</span></li>
+                                            <li class="dropdown-item"><img src="./img/icons/beans.svg" class="dropdown-item-img" alt="powder"><span class="dropdown-item-text">Какао бобы</span><span class="dropdown-item-features">4 г</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="slider__title">Батончик “Гранола 
+                                    виноград”</div>
+                                <div class="slider__product-description">Гранола из винограда, грецкого ореха и кунжутных семечек. В состав также входят: сухое молоко, заменитель сахара и какао бобы.</div>
+                                <div class="slider__product-features">
+                                    <div class="slider__product-feature"><p>Калорийность</p><p><b>110 ккал</b></p></div>
+                                    <div class="slider__product-feature"><p>Вес</p><p><b>98 грамм</b></p></div>
+                                </div>
+                                <div class="slider__product-inner">
+                                    <div class="slider__product-price">140 ₽</div>
+                                    <div class="slider__order-btn-wrapper"><a href="#" class="btn btn--theme--green btn-slider-order">Заказать</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider-section__right-arrow">
+                            <a href="#" class="right-arrow__link"><img src="./img/icons/arrow.svg" class="arrow right-arrow__img" alt="right arrow"></a>
+                        </div>
+                </div>
+
             </section>
             <section class="section">
                 <div class="container">
@@ -289,17 +359,17 @@
                             <address class="contacts__place">
                                 Москва, ул.Новый Арбат, д.31/12
                             </address>
-                        
-                        <a href="tel:+788009039090" class="phone-number contacts__phone footer__phone-number">
-                            <span class="phone-number__icon">
-                                <!-- <img src="./img/icons/phone.svg" class="phone-number__icon-elem" alt="phone icon"> -->
-                                <svg class="phone-number__icon-elem phone-number__footer">
-                                    <use xlink:href="./img/sprite.svg#phone"></use>
-                                </svg>
-                            </span>
-                            <span class="phone-number__text">8 800 903 90 90</span>
-                        </a>
-                    </div>
+
+                            <a href="tel:+788009039090" class="phone-number contacts__phone footer__phone-number">
+                                <span class="phone-number__icon">
+                                    <!-- <img src="./img/icons/phone.svg" class="phone-number__icon-elem" alt="phone icon"> -->
+                                    <svg class="phone-number__icon-elem phone-number__footer">
+                                        <use xlink:href="./img/sprite.svg#phone"></use>
+                                    </svg>
+                                </span>
+                                <span class="phone-number__text">8 800 903 90 90</span>
+                            </a>
+                        </div>
                         <ul class="socials">
                             <li class="social__item">
                                 <a href="#" class="social__link">
@@ -357,6 +427,10 @@
             <li class="fixed-menu__item"><a href="#" class="fixed-menu__link"></a></li>
         </ul>
     </nav>
+
+
+    <script src="./js/burger.js"></script>
 </body>
 
 </html>
+
