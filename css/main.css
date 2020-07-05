@@ -3,14 +3,19 @@
 html {
   font-size: 18px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1050px) {
   html {
     font-size: 17px;
   }
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   html {
     font-size: 16px;
+  }
+}
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 15px;
   }
 }
 @media screen and (max-width: 400px) {
@@ -499,6 +504,28 @@ img {
   }
 }
 
+.review__list {
+  position: relative;
+  min-height: 280px;
+}
+
+.review__item.active {
+  position: static;
+  opacity: 1;
+  pointer-events: unset;
+}
+
+.review__item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  transform: 0.3s;
+  opacity: 0;
+}
+
 .reviews__display {
   background: #f8faf9;
   padding: 2.7777777778rem 2.5rem 1.8888888889rem;
@@ -613,7 +640,11 @@ img {
   overflow: hidden;
   position: relative;
 }
-.interactive-avatar--active {
+.interactive-avatar:hover {
+  border-color: #0f5a47;
+}
+
+.active {
   border-color: #0f5a47;
 }
 
@@ -1133,12 +1164,16 @@ img {
 a.left-arrow__link, a.right-arrow__link {
   position: absolute;
   width: 13px;
-  height: 28px;
 }
 
 .left-arrow__link {
   left: -1.6666666667rem;
   transform: rotate(180deg);
+}
+@media screen and (max-width: 1050px) {
+  .left-arrow__link {
+    left: 0%;
+  }
 }
 @media screen and (max-width: 768px) {
   .left-arrow__link {
@@ -1155,6 +1190,11 @@ a.left-arrow__link, a.right-arrow__link {
 
 .right-arrow__link {
   right: -1.6666666667rem;
+}
+@media screen and (max-width: 1050px) {
+  .right-arrow__link {
+    right: 0%;
+  }
 }
 @media screen and (max-width: 768px) {
   .right-arrow__link {

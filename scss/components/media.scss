@@ -2,6 +2,13 @@
     @return $px / $baseFontSize + 0rem;
 }
 
+@mixin big-tablets {
+    @media screen and (max-width: $big-tablets) {
+        @content;
+    }
+}
+
+
 @mixin tablets {
     @media screen and (max-width: $tablets) {
         @content;

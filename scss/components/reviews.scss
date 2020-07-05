@@ -1,3 +1,30 @@
+.review__list {
+    position: relative;
+    min-height: 280px;
+}
+
+
+
+.review__item.active {
+    position: static;
+    opacity: 1;
+    pointer-events: unset;
+}
+
+
+
+.review__item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    transform: .3s;
+    opacity: 0;    
+}
+
+
 .reviews__display {
     background: #f8faf9;
     padding: rem(50px) rem(45px) rem(34px);
@@ -109,10 +136,21 @@
     overflow: hidden;
     position: relative;
 
-    &--active {
+    &:hover {
         border-color: #0f5a47;
     }
+
+
+    // &.active {
+    //     border-color: #0f5a47;
+    // }
 }
+
+.active {
+    border-color: #0f5a47;
+}
+
+
 
 .interactive-avatar-link {
     position: absolute;
