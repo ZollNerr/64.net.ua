@@ -1,0 +1,136 @@
+.team {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.team__item {
+    flex: 1;
+    text-align: center;
+    margin-right: 20px;
+    max-width: rem(260px);
+    position: relative;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    @include tablets {
+        flex: initial;
+        margin-bottom: 0;   
+    }
+}
+
+.team__member {
+    height: rem(290px);
+    margin-bottom: 20px;
+
+    @include tablets {
+        margin-right: 0;
+    }
+}
+
+.team__member-img {
+    height: rem(290px);
+    width: rem(220px);
+    overflow: hidden;
+    object-fit: cover;
+    display: inline;
+}
+
+button.team__title  {
+    padding: 0;
+    border: none;
+    font-size: 21px;
+    font-weight: bold;
+    color: #323232;
+    background-color: transparent;
+    text-transform: none;
+     
+    &:active, &:focus {
+        outline: none;    
+    }
+}
+
+
+.team__title {
+    color: #323232;
+    // display: inline;
+    // width: 200px;
+    // display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-size: 21px;
+    margin-bottom: 20px;
+
+    &:after {
+        position: absolute;
+        display: inline-flex;
+        // display: inline-block;
+        top: 10px;
+        // vertical-align: middle;
+        margin-left: 5px;
+        content: "";
+        border: 4px solid transparent;
+        border-top: 5px solid black;
+    }
+}
+
+.team--version--desktop .team__content {
+    position: absolute;
+    top: 100%;
+}
+
+.team--version--desktop {
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+
+
+    @include tablets {
+        display: none;
+    }
+}
+
+
+.team--version--mobile {
+    display: none;
+
+
+    @include tablets {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.team__content-block-descr {
+    font-weight: 300;
+}
+
+
+.team--version--mobile .team__item {
+    margin-bottom: 10px;
+}
+
+.team__content {
+    overflow: hidden;
+    transition: height .3s;
+    height: 0;
+}
+
+.team__content-block {
+    padding-bottom: 5px;
+
+    @include tablets {
+        display: flex;
+        flex-direction: column;
+        min-height: 370px;
+    }
+    
+}
+
+.team__content-block-job {
+    font-weight: bold;
+}
