@@ -8,7 +8,7 @@
 .team__item {
     flex: 1;
     text-align: center;
-    margin-right: 20px;
+    // margin-right: 20px;
     max-width: rem(260px);
     position: relative;
 
@@ -23,20 +23,28 @@
 }
 
 .team__member {
-    height: rem(290px);
-    margin-bottom: 20px;
+    height: rem(220px);
+    overflow: hidden;
+    margin: 0 auto 20px auto;
+    width: 85%;
+    // margin-bottom: 20px;
 
     @include tablets {
-        margin-right: 0;
+        width: 65%;
+        // margin-right: 0;
     }
 }
 
 .team__member-img {
-    height: rem(290px);
-    width: rem(220px);
-    overflow: hidden;
+    height: 100%;
+    width: 100%;
     object-fit: cover;
-    display: inline;
+    
+    // height: rem(290px);
+    // width: rem(220px);
+    // overflow: hidden;
+    // object-fit: cover;
+    // display: inline;
 }
 
 button.team__title  {
@@ -111,7 +119,7 @@ button.team__title  {
 
 
 .team--version--mobile .team__item {
-    margin-bottom: 10px;
+    // margin-bottom: 10px;
 }
 
 .team__content {
@@ -126,7 +134,8 @@ button.team__title  {
     @include tablets {
         display: flex;
         flex-direction: column;
-        min-height: 370px;
+        min-height: auto;
+        // min-height: 370px;
     }
     
 }

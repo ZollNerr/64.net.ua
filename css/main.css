@@ -873,7 +873,8 @@ img {
 }
 
 .map-section {
-  background: url("../img/pure-map.jpg") center center/cover no-repeat;
+  height: auto;
+  width: auto;
 }
 
 .footer {
@@ -1191,7 +1192,7 @@ a.left-arrow__link, a.right-arrow__link {
 @media screen and (max-width: 480px) {
   .left-arrow__link {
     left: 5%;
-    top: 41vmin;
+    top: 20vmin;
   }
 }
 
@@ -1212,7 +1213,7 @@ a.left-arrow__link, a.right-arrow__link {
 @media screen and (max-width: 480px) {
   .right-arrow__link {
     right: 5%;
-    top: 41vmin;
+    top: 20vmin;
   }
 }
 
@@ -1231,7 +1232,6 @@ a.left-arrow__link, a.right-arrow__link {
 .team__item {
   flex: 1;
   text-align: center;
-  margin-right: 20px;
   max-width: 14.4444444444rem;
   position: relative;
 }
@@ -1246,21 +1246,21 @@ a.left-arrow__link, a.right-arrow__link {
 }
 
 .team__member {
-  height: 16.1111111111rem;
-  margin-bottom: 20px;
+  height: 12.2222222222rem;
+  overflow: hidden;
+  margin: 0 auto 20px auto;
+  width: 85%;
 }
 @media screen and (max-width: 768px) {
   .team__member {
-    margin-right: 0;
+    width: 65%;
   }
 }
 
 .team__member-img {
-  height: 16.1111111111rem;
-  width: 12.2222222222rem;
-  overflow: hidden;
+  height: 100%;
+  width: 100%;
   object-fit: cover;
-  display: inline;
 }
 
 button.team__title {
@@ -1319,10 +1319,6 @@ button.team__title:active, button.team__title:focus {
   font-weight: 300;
 }
 
-.team--version--mobile .team__item {
-  margin-bottom: 10px;
-}
-
 .team__content {
   overflow: hidden;
   transition: height 0.3s;
@@ -1336,7 +1332,7 @@ button.team__title:active, button.team__title:focus {
   .team__content-block {
     display: flex;
     flex-direction: column;
-    min-height: 370px;
+    min-height: auto;
   }
 }
 
@@ -1365,4 +1361,133 @@ button.team__title:active, button.team__title:focus {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.player-section__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.player-section__container {
+  height: 408px;
+  width: 660px;
+}
+
+.player__wrapper {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.player {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.player.active .player__splash {
+  display: none;
+}
+.player.paused .player__start {
+  width: 14px;
+  height: 22px;
+  border: none;
+}
+.player.paused .player__start:after, .player.paused .player__start:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 5px;
+  top: 0;
+  bottom: 0;
+  background: #626262;
+}
+.player.paused .player__start:after {
+  right: 0;
+}
+.player.paused .player__start:before {
+  left: 0;
+}
+
+.player__splash {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url(../img/decor/splashscreen.jpg) center center/cover no-repeat;
+  cursor: pointer;
+}
+.player__splash:after {
+  content: "";
+  position: absolute;
+  height: 118px;
+  width: 82px;
+  padding: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: url(../../img/big-play.png) center center no-repeat;
+  cursor: pointer;
+}
+
+.player__start {
+  background: url(../../img/play.svg) center center no-repeat;
+  height: 20px;
+  width: 20px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  text-transform: none;
+}
+.player__start:active, .player__start:focus {
+  outline: none;
+}
+
+.player__controls {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 35px;
+  background: #3e3e3e;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 25px;
+}
+
+.player__playback {
+  height: 16px;
+  width: 446px;
+  position: relative;
+}
+.player__playback::before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 446px;
+  top: 6px;
+  bottom: 0;
+  background: #626262;
+}
+
+button {
+  cursor: pointer;
+}
+
+.player__playback-button {
+  background: #626262;
+  border-radius: 50px;
+  border: none;
+  width: 12px;
+  height: 12px;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 0;
 }
