@@ -110,9 +110,6 @@ img {
   min-height: 36.1111111111rem;
   color: #fff;
   position: relative;
-  min-width: 100%;
-  padding: 20px 60px;
-  position: absolute;
 }
 @media screen and (max-width: 768px) {
   .hero {
@@ -1022,6 +1019,7 @@ img {
   border: 0;
   background: transparent;
   box-shadow: none;
+  margin-bottom: 0 !important;
 }
 
 .slider-section {
@@ -1548,6 +1546,18 @@ button.products-menu__close:active, button.products-menu__close:focus {
   bottom: 0;
   display: flex;
 }
+@media screen and (max-width: 768px) {
+  .products-menu {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+@media screen and (max-width: 480px) {
+  .products-menu {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
 
 .products-menu-section__title {
   position: absolute;
@@ -1555,9 +1565,32 @@ button.products-menu__close:active, button.products-menu__close:focus {
   top: 4.4444444444rem;
   color: #fff;
 }
+@media screen and (max-width: 480px) {
+  .products-menu-section__title {
+    left: 0.8333333333rem;
+    font-size: 2.2222222222rem;
+  }
+}
 
 .products-menu__item {
   display: flex;
+  height: 100%;
+}
+@media screen and (max-width: 768px) {
+  .products-menu__item.active {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .products-menu__item.active {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
 }
 
 .products-menu__image {
@@ -1566,7 +1599,7 @@ button.products-menu__close:active, button.products-menu__close:focus {
   bottom: 0;
   right: 0;
   height: 100vh;
-  width: 5.5555555556rem;
+  width: 100px;
 }
 @media screen and (max-width: 480px) {
   .products-menu__image {
@@ -1580,7 +1613,7 @@ button.products-menu__close:active, button.products-menu__close:focus {
 }
 @media screen and (max-width: 480px) {
   .products-menu__title {
-    width: 4.4444444444rem;
+    width: 62px;
   }
 }
 
@@ -1608,6 +1641,7 @@ button.products-menu__close:active, button.products-menu__close:focus {
   position: relative;
   overflow: hidden;
   transition: width 0.7s;
+  z-index: 2;
 }
 
 .products-menu__content-text {

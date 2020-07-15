@@ -22,7 +22,6 @@ button.products-menu__close {
         &:active, &:focus {
             outline: none !important;
             }
-
 }
 
 .products-menu__close-x {
@@ -44,9 +43,18 @@ button.products-menu__close {
     top: 0;
     bottom: 0;
     display: flex;
+
+
+    @include tablets {
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    @include phones {
+        width: 100%;
+        justify-content: flex-end;
+    }
 }
-
-
 
 
 
@@ -55,10 +63,35 @@ button.products-menu__close {
     left: rem(50px);
     top: rem(80px);
     color: #fff;
+
+    @include phones {
+            left: rem(15px);
+            font-size: rem(40px);
+    }
 }
 
 .products-menu__item {
     display: flex;
+    height: 100%;
+
+
+    @include tablets {
+        &.active {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+        }
+    }
+
+    @include phones {
+        &.active {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+        }
+    }
 }
 
 .products-menu__image {
@@ -67,7 +100,8 @@ button.products-menu__close {
     bottom: 0;
     right: 0;
     height: 100vh;
-    width: rem(100px);
+    width: 100px;
+    // width: rem(100px);
 
     @include phones {
         width: rem(80px);
@@ -80,7 +114,7 @@ button.products-menu__close {
     width: rem(100px);
 
     @include phones {
-        width: rem(80px);
+        width: 62px;
     }
 }
 
@@ -109,6 +143,7 @@ button.products-menu__close {
     position: relative;
     overflow: hidden;
     transition: width .7s;
+    z-index: 2;
 }
 
 .products-menu__content-text {
