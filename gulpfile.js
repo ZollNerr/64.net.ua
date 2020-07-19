@@ -32,14 +32,36 @@ task('copy:html', () => {
    .pipe(dest(DIST_PATH))
    .pipe(reload({ stream: true }));
 })
+
+task('video', () => {
+  return src(`${SRC_PATH}/video/*.mp4`)
+    .pipe(dest(`${DIST_PATH}/video`))
+    .pipe(reload({ stream: true }));
+ })
+
+task('copy:images', () => {
+  // return src([`${SRC_PATH}/img/**/*`,`!${SRC_PATH}/img/**/*.svg`])
+  return src([`${SRC_PATH}/img/**/*`])
+    .pipe(dest(`${DIST_PATH}/img`))
+    .pipe(reload({ stream: true }));
+ })
  
+ task('sass', () => {
+  return src([`${SRC_PATH}/scss/main.scss`])
+    .pipe(gulpif(env === 'dev', sourcemaps.init()))
+    .pipe(concat('main.scss'))
+    .pipe(sassGlob())
+    .pipe(sass().on('error', sass.logError))
+    .pipe(dest(`${SRC_PATH}/scss`))
+    .pipe(reload({ stream: true }));
+ });
+
 task('styles', () => {
- return src([...STYLE_LIBS, 'src/scss/main.scss'])
+ return src([...STYLE_LIBS, 'src/scss/main.css'])
    .pipe(gulpif(env === 'dev', sourcemaps.init()))
-   .pipe(concat('main.min.scss'))
-   .pipe(sassGlob())
-   .pipe(sass().on('error', sass.logError))
-   .pipe(px2rem())
+   .pipe(concat('main.css'))
+
+  //  .pipe(px2rem())
    .pipe(gulpif(env === 'prod', autoprefixer({
        browsers: ['last 2 versions'],
        cascade: false
@@ -47,14 +69,12 @@ task('styles', () => {
    .pipe(gulpif(env === 'prod', gcmq()))
    .pipe(gulpif(env === 'prod', cleanCSS()))
    .pipe(gulpif(env === 'dev', sourcemaps.write()))
-   .pipe(dest(DIST_PATH))
+   .pipe(dest(`${DIST_PATH}/css`))
    .pipe(reload({ stream: true }));
 });
+
+
  
-const libs = [
- 'node_modules/jquery/dist/jquery.js',
- 'src/js/*.js'
-];
  
 task('scripts', () => {
  return src([...JS_LIBS, 'src/js/*.js'])
@@ -83,7 +103,7 @@ task('icons', () => {
    .pipe(svgSprite({
      mode: {
        symbol: {
-         sprite: '../sprite_all.svg'
+         sprite: '../sprite.svg'
        }
      }
    }))
@@ -100,8 +120,9 @@ task('server', () => {
 });
  
 task('watch', () => {
- watch('./src/scss/**/*.scss', series('styles'));
+ watch('./src/scss/**/*.scss', series('sass','styles'));
  watch('./src/*.html', series('copy:html'));
+ watch('./src/**/*', series('copy:images'));
  watch('./src/js/*.js', series('scripts'));
  watch('./src/img/icons/*.svg', series('icons'));
 });
@@ -109,14 +130,14 @@ task('watch', () => {
  
 task('default',
  series(
-   'clean',
-   parallel('copy:html', 'styles', 'scripts', 'icons'),
+   'clean','copy:images','sass',
+   parallel('copy:html', 'video', 'styles', 'scripts', 'icons'),
    parallel('watch', 'server')
  )
 );
  
 task('build',
  series(
-   'clean',
-   parallel('copy:html', 'styles', 'scripts', 'icons'))
+   'clean','copy:images','sass',
+   parallel('copy:html', 'video', 'styles', 'scripts', 'icons'))
 );

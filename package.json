@@ -41,7 +41,11 @@
     "node-sass": "^4.14.1"
   },
   "dependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
+    "bxslider": "^4.2.14",
     "jquery": "^3.5.1",
+    "jquery-touchswipe": "^1.6.19",
+    "mobile-detect": "^1.4.4",
     "normalize.css": "^8.0.1"
   }
 }
